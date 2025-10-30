@@ -1,0 +1,28 @@
+---
+import { site, type SeoProps } from "../config/site";
+const props = Astro.props as SeoProps;
+const title = props.title ?? site.title;
+const description = props.description ?? site.description;
+const canonical = props.canonical ?? site.url;
+const image = props.image ?? site.socialImage;
+---
+<Fragment>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={site.keywords.join(", ")} />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  {image ? <meta property="og:image" content={image} /> : null}
+  <meta property="og:url" content={canonical} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  {image ? <meta name="twitter:image" content={image} /> : null}
+</Fragment>
+

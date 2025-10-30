@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../config/site';
+---
+
+<Layout>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="space-y-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-relaxed md:leading-snug">Demystifying Diophantine Approximation</h1>
+      <p class="text-lg text-gray-700">From intuitive insights to deep theory — learn how well real numbers can be approximated by rationals, why it matters, and how it powers real-world applications.</p>
+    </div>
+    <div class="relative">
+      <div class="absolute -inset-6 -z-10 bg-gradient-to-tr from-indigo-100 via-purple-100 to-pink-100 rounded-3xl blur-xl"></div>
+      <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p class="text-sm uppercase tracking-wide text-gray-500 mb-3">Example Statement</p>
+        <p class="text-gray-800">Dirichlet's theorem: For any real <em class="font-semibold">x</em> and positive integer <em class="font-semibold">Q</em>, there exist integers <em class="font-semibold">p, q</em> with <em class="font-semibold">1 ≤ q ≤ Q</em> such that</p>
+        <p class="mt-4 text-center text-lg">$$\left|x - \\frac&#123;p&#125;&#123;q&#125;\right| < \\frac&#123;1&#125;&#123;qQ&#125;$$</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-width CTA row to keep buttons on one line on wider screens -->
+  <section class="mt-6">
+    <div class="flex flex-wrap md:flex-nowrap gap-3 md:justify-center">
+      <a href="/basics" class="inline-flex items-center rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-black">Start with the Basics</a>
+      <a href="/deeper" class="inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-50">Dive into the Deeper Version</a>
+      <a href="/applications" class="inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-50">See Applications</a>
+    </div>
+  </section>
+
+  <section class="mt-16 grid gap-6 md:grid-cols-3">
+    <a href="/about" class="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+      <h3 class="text-lg font-semibold text-gray-900">About David</h3>
+      <p class="mt-2 text-sm text-gray-600">Teacher, mathematician, and engineer — committed to making advanced ideas accessible to everyone.</p>
+      <span class="mt-3 inline-block text-sm font-medium text-indigo-700 group-hover:underline">Learn more →</span>
+    </a>
+    <a href="/basics" class="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+      <h3 class="text-lg font-semibold text-gray-900">Diophantine Approximation, Simply</h3>
+      <p class="mt-2 text-sm text-gray-600">A friendly introduction with pictures, intuition, and just enough math.</p>
+      <span class="mt-3 inline-block text-sm font-medium text-indigo-700 group-hover:underline">Read the basics →</span>
+    </a>
+    <a href="/deeper" class="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+      <h3 class="text-lg font-semibold text-gray-900">The Deeper Version</h3>
+      <p class="mt-2 text-sm text-gray-600">The full story: precise statements, proofs sketches, and references.</p>
+      <span class="mt-3 inline-block text-sm font-medium text-indigo-700 group-hover:underline">Go deep →</span>
+    </a>
+  </section>
+</Layout>

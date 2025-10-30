@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <article class="prose prose-slate max-w-none">
+    <h1>Practical Applications</h1>
+    <p>
+      Diophantine Approximation shows up anywhere precise ratios or near-commensurabilities matter.
+    </p>
+    <ul>
+      <li><strong>Signal processing</strong>: frequency estimation and beating phenomena rely on rational approximations to frequency ratios.</li>
+      <li><strong>Cryptography</strong>: attacks on poorly parameterized systems (e.g., partial key exposure) can leverage lattice methods akin to approximation techniques.</li>
+      <li><strong>Timekeeping / synchronization</strong>: aligning clocks and oscillators benefits from near-integer relations between periods.</li>
+      <li><strong>Computer graphics</strong>: sampling artifacts (moiré) can be explained via rational relationships between grids.</li>
+      <li><strong>Music theory</strong>: tuning systems approximate irrational intervals (like the perfect fifth) by rational ratios.</li>
+    </ul>
+
+    <h2>Rule of Thumb</h2>
+    <p>
+      Approximations with small denominators are more stable and interpretable, while extremely good approximations (tiny error with large <em>q</em>) can indicate coincidental or structural relationships worth exploiting.
+    </p>
+  </article>
+</Layout>
+

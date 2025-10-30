@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <article class="prose prose-slate max-w-none">
+    <h1>Diophantine Approximation — The Simple Version</h1>
+    <p>
+      How closely can a real number be approximated by rationals? Diophantine Approximation studies inequalities of the form
+      $$\left|x - \\frac&#123;p&#125;&#123;q&#125;\right| < \\varepsilon,$$
+      where <em>p</em> and <em>q</em> are integers and <em>q</em> is positive. The smaller the error for a given <em>q</em>, the “better” the approximation.
+    </p>
+
+    <h2>Why care?</h2>
+    <ul>
+      <li>It explains why continued fractions give excellent approximations.</li>
+      <li>It underlies results in dynamics, geometry of numbers, and cryptography.</li>
+      <li>It powers practical tasks like frequency estimation and synchronization.</li>
+    </ul>
+
+    <h2>Dirichlet’s Guarantee</h2>
+    <p>
+      For any real number <em>x</em> and positive integer <em>Q</em>, there exist integers <em>p</em> and <em>q</em> with <em>1 \le q \le Q</em> such that
+    </p>
+    <p class="text-center">$$\left|x - \\frac&#123;p&#125;&#123;q&#125;\right| < \\frac&#123;1&#125;&#123;qQ&#125;.$$</p>
+    <p>
+      This already ensures infinitely many rational approximations with error better than <code>1/q^2</code> by letting <em>Q=q</em> and sending <em>q</em> to infinity.
+    </p>
+
+    <h2>Continued Fractions</h2>
+    <p>
+      The convergents of the continued fraction of <em>x</em> (fractions obtained by truncating the expansion) give some of the best possible approximations. For example, with \(x=\varphi=(1+\sqrt5)/2\):
+    </p>
+    <p class="text-center">$$\\varphi = [1; 1, 1, 1, \\dots],\\quad \\frac&#123;F_&#123;n+1&#125;&#125;&#123;F_n&#125; \\to \\varphi$$</p>
+    <p>
+      where \(F_n\) are Fibonacci numbers.
+    </p>
+  </article>
+</Layout>
+

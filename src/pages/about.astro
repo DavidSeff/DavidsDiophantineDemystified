@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../config/site';
+const pageTitle = `About — ${site.name}`;
+---
+
+<Layout>
+  <article class="prose prose-slate max-w-none">
+    <h1>{pageTitle}</h1>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-[220px,1fr] gap-8 items-start">
+      <img src="/images/photo.png" alt="David Seff" class="rounded-xl shadow-sm border border-gray-200 w-[220px] h-auto" />
+      <div class="space-y-4">
+        <p>
+          David Seff has spent more than forty years at the intersection of mathematics, software, and teaching. He has taught a wide range of courses—from calculus and geometry to probability, statistics, and number theory—and co-authored a graduate-level text in constructive combinatorics.
+        </p>
+        <p>
+          Early in his career, David taught at City College and Baruch College while also serving as a Project Leader and Programmer Analyst at Chase Manhattan Bank, where he built recovery tools that rescued critical securities data after disk failures. He later worked as a software engineer at Guardian Life, contributing to Y2K testing procedures, authoring new product code, and mentoring programmers in high-precision computation techniques.
+        </p>
+        <p>
+          David earned his M.A. in Mathematics at the Courant Institute of Mathematical Sciences, after undergraduate studies in Mathematics and Physics at Yeshiva University (and an M.A. in History). As a freshman, he was among a select group nationwide invited to take graduate mathematics, and he scored among the top 100 nationally on the Putnam Competition.
+        </p>
+        <p>
+          Back in academia, David taught at Touro College, Kingsborough Community College, and Brooklyn College. His course “Fun with Math” (with the tongue-in-cheek prerequisite: “a disgust for math”) consistently filled and received outstanding feedback. He has also taught physics courses on optics and color, alongside number theory and non-Euclidean geometry.
+        </p>
+        <p class="font-medium">
+          Mathematics is often misunderstood not because it is inherently inaccessible, but because it is too rarely taught with the right scaffolding and setting. With the right approach, even surprisingly young learners can internalize advanced ideas.
+        </p>
+        <p>
+          Today, David focuses on bringing number theory—and Diophantine Approximation in particular—to broader audiences with clarity, warmth, and rigor.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>
+
