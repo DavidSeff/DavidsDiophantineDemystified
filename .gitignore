@@ -51,3 +51,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+public/logo-ays.svg
+public/logo-dncs.svg
