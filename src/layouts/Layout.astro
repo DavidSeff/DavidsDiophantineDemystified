@@ -17,14 +17,37 @@ const { title, description } = site;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-+K8PNK5wVfN2WfVqj3Y2zjw1lG9kqQ7Q9cQ8n6mJr9T7o6C+2v0o2mKDY4xQyM6Z" crossorigin="anonymous" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" as="style" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (typeof window !== 'undefined' && (window as any).renderMathInElement) {
+          (window as any).renderMathInElement(document.querySelector('main') ?? document.body, {
+            delimiters: [
+              { left: '$$', right: '$$', display: true },
+              { left: '\\(', right: '\\)', display: false },
+              { left: '\\[', right: '\\]', display: true }
+            ],
+            throwOnError: false
+          });
+        }
+      });
+    </script>
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-gradient-to-b from-white to-slate-50 text-gray-800">
     <Header />
-    <main class="mx-auto max-w-6xl px-4 py-10">
+    <main class="mx-auto max-w-6xl px-4 py-10 leading-relaxed">
       <slot />
     </main>
     <Footer />
   </body>
+  <style>
+    body {
+      line-height: 1.9;
+    }
+  </style>
   </html>

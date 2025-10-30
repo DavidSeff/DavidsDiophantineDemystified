@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const math1 = String.raw`$$\left|x - \frac{p}{q}\right| < \varepsilon,$$`;
+const math2 = String.raw`$$\left|x - \frac{p}{q}\right| < \frac{1}{qQ}.$$`;
+const math3 = String.raw`$$\varphi = [1; 1, 1, 1, \dots],\quad \frac{F_{n+1}}{F_n} \to \varphi$$`;
 ---
 
 <Layout>
@@ -7,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
     <h1>Diophantine Approximation — The Simple Version</h1>
     <p>
       How closely can a real number be approximated by rationals? Diophantine Approximation studies inequalities of the form
-      $$\left|x - \\frac&#123;p&#125;&#123;q&#125;\right| < \\varepsilon,$$
-      where <em>p</em> and <em>q</em> are integers and <em>q</em> is positive. The smaller the error for a given <em>q</em>, the “better” the approximation.
+      {math1}
+      where <em>p</em> and <em>q</em> are integers and <em>q</em> is positive. The smaller the error for a given <em>q</em>, the &ldquo;better&rdquo; the approximation.
     </p>
 
     <h2>Why care?</h2>
@@ -22,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
     <p>
       For any real number <em>x</em> and positive integer <em>Q</em>, there exist integers <em>p</em> and <em>q</em> with <em>1 \le q \le Q</em> such that
     </p>
-    <p class="text-center">$$\left|x - \\frac&#123;p&#125;&#123;q&#125;\right| < \\frac&#123;1&#125;&#123;qQ&#125;.$$</p>
+    <p class="text-center">{math2}</p>
     <p>
       This already ensures infinitely many rational approximations with error better than <code>1/q^2</code> by letting <em>Q=q</em> and sending <em>q</em> to infinity.
     </p>
@@ -31,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
     <p>
       The convergents of the continued fraction of <em>x</em> (fractions obtained by truncating the expansion) give some of the best possible approximations. For example, with \(x=\varphi=(1+\sqrt5)/2\):
     </p>
-    <p class="text-center">$$\\varphi = [1; 1, 1, 1, \\dots],\\quad \\frac&#123;F_&#123;n+1&#125;&#125;&#123;F_n&#125; \\to \\varphi$$</p>
+    <p class="text-center">{math3}</p>
     <p>
       where \(F_n\) are Fibonacci numbers.
     </p>

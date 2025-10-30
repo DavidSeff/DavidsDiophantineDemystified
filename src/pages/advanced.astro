@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+const math1 = String.raw`$$\left|x - \frac{p}{q}\right| < \frac{1}{qQ}. $$`;
+const math2 = String.raw`$$\left|x - \frac{p}{q}\right| < \frac{c}{q^2}.$$`;
+const math3 = String.raw`$$\left|x - \frac{a}{b}\right| \ge \left|x - \frac{p_n}{q_n}\right|.$$`;
+const inlineSum = String.raw`\(\sum q\,\psi(q)\)`;
+const inlineMeasure = String.raw`\(|x - p/q| < \psi(q)/q\)`;
+---
+
+<Layout>
+  <article class="prose prose-slate max-w-none">
+    <h1>Diophantine Approximation — Advanced Overview</h1>
+    <p>
+      This page collects more formal statements, refinements, and context. It is intended for readers comfortable with analysis and number theory.
+    </p>
+
+    <h2>Classical Statements</h2>
+    <h3>Dirichlet&rsquo;s Theorem (Simultaneous Form)</h3>
+    <p>
+      For any real <em>x</em> and positive integer <em>Q</em>, there exist integers <em>p</em> and <em>q</em> with <em>1 \le q \le Q</em> such that
+    </p>
+    <p class="text-center">{math1}</p>
+
+    <h3>Hurwitz&rsquo;s Theorem</h3>
+    <p>
+      There exists a constant \\(c=\\frac&#123;1&#125;&#123;\\sqrt{5}&#125;\\) such that for any irrational \\(x\\), there are infinitely many rationals \\(p/q\\) with
+    </p>
+    <p class="text-center">{math2}</p>
+    <p>
+      The constant is best possible (attained by the golden ratio and its equivalents).
+    </p>
+
+    <h2>Continued Fractions and Best Approximations</h2>
+    <p>
+      Convergents p_n/q_n of the continued fraction of x are best approximations: any fraction a/b with denominator b at most q_n cannot achieve a smaller error than p_n/q_n.
+    </p>
+    <p class="text-center">{math3}</p>
+
+    <h2>Metric Results</h2>
+    <p>
+      Khintchine&rsquo;s theorem relates the measure of numbers satisfying {inlineMeasure} infinitely often to a divergence test on {inlineSum}. Jarnik&ndash;Besicovitch theorems refine to Hausdorff dimension.
+    </p>
+
+    <h2>Geometry of Numbers</h2>
+    <p>
+      Minkowski's convex body theorem gives clean lattice-based proofs of Dirichlet-type bounds and generalizations to linear forms.
+    </p>
+  </article>
+</Layout>
+
