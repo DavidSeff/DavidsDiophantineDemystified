@@ -3,8 +3,8 @@ export const site = {
   title: "Diophantine Demystified — Learn Diophantine Approximation",
   description:
     "Beautiful, clear explanations of Diophantine Approximation for all levels — from intuitive basics to deep theory and practical applications.",
-  url: "https://example.com", // update when deployed
-  githubUrl: "https://github.com/your-username/diophantine-demystified", // update to real repo URL
+  url: "https://DavidsDiophantineDemystified.io", // update when deployed
+  githubUrl: "https://github.com/DavidSeff/DavidsDiophantineDemystified/settings", // update to real repo URL
   author: {
     name: "David Seff",
   },
